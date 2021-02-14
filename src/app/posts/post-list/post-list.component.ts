@@ -3,7 +3,6 @@ import { Component } from "@angular/core";
 import { PageEvent } from "@angular/material";
 import { Subscription } from "rxjs";
 import { AuthService } from "src/app/auth/auth.service";
-import { environment } from 'src/environments/environment';
 
 import { Post } from "../posts.model";
 import { PostsService } from "../posts.service";
@@ -28,7 +27,6 @@ export class PostListComponent implements OnInit, OnDestroy {
   constructor(public postService: PostsService, private authService: AuthService) {}
 
   ngOnInit(){
-    console.log(environment.apiUrl);
     this.isLoading = true;
     this.postService.getPosts(this.postsPerPage, this.currentPage);
     this.userId = this.authService.getUserId();
