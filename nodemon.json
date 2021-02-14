@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MONGO_ATLAS_PW": "QHHK5ssBdGjVLc79",
+    "JWT_KEY": "secret_private_key_pradeep"
+  }
+}
